@@ -7,7 +7,7 @@ public class Character {
 
     // Method
     public void sayMyName() {
-        System.out.println("llo I am\nHe " + name + "\nmy strength is: " + strength + "\nmy agility is: " + agility + "\nmy intelligence is: " + intelligence);
+        System.out.println("\nHello I'm " + name + "\nmy strength is: " + strength + "\nmy agility is: " + agility + "\nmy intelligence is: " + intelligence);
     }
 
     // Constructor
