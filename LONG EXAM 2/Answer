@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class App {
 
     static Scanner scan = new Scanner(System.in);
@@ -186,11 +184,11 @@ public class App {
            System.out.println("valid");
            break;
 
-           case "ARTS AND DESIGN":
+           case "ARTS_AND_DESIGN":
            System.out.println("valid");
            break;
 
-           case "TVL MARITIME":
+           case "TVL_MARITIME":
            System.out.println("valid");
            break;
 
@@ -291,10 +289,10 @@ public class App {
         System.out.println("2. PRIME or COMPOSITE number");
         System.out.print("Enter the last digit of your student number: ");
         int lastDigit = scan.nextInt();
-        if (lastDigit % 3 == 0) {
+        if(lastDigit == 2 || lastDigit ==  3 || lastDigit ==  5||lastDigit ==  7){
             System.out.println("PRIME");
-        } else if (lastDigit % 2 == 0) {
-            System.out.println("COMPOSITE");
+        } else if (lastDigit == 4 || lastDigit == 6 || lastDigit ==8 || lastDigit == 9){
+           System.out.println("COMPOSITE");
         } else if (lastDigit == 1) {
             System.out.println("NEITHER");
         }
