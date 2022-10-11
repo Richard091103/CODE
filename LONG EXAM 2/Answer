@@ -118,13 +118,13 @@ public class App {
         // if BSIT
         if (course.toLowerCase().equals("bsit") || course.toUpperCase().equals("BSIT")) {
             
-            System.out.print("Enter your specialization (MWAA or MAA): ");
+            System.out.print("Enter your specialization (MWA or MAA): ");
             String specialization1 = scan.next();
-            if (specialization1.toLowerCase().equals("mwaa") || specialization1.toUpperCase().equals("MWAA"))
+            if (specialization1.toLowerCase().equals("mwa") || specialization1.toUpperCase().equals("MWA") && specialization1.toLowerCase().equals("aa") || specialization1.toUpperCase().equals("MAA") )
             {
-                System.out.println("YOUR SPEACILIZATION IS MWAA");
+                System.out.println("VALID");
             } else
-                System.out.println("YOUR SPEACILIZATION IS MAA");
+                System.out.println("INVALID");
     
 
         }
@@ -133,11 +133,11 @@ public class App {
         else if (course.toLowerCase().equals("bscs") || course.toUpperCase().equals("BSCS")) {
             System.out.print("Enter your specialization (DF or ML): ");
             String specialization2 = scan.next();
-            if (specialization2.toLowerCase().equals("df") || specialization2.toUpperCase().equals("DF"))
+            if (specialization2.toLowerCase().equals("df") || specialization2.toUpperCase().equals("DF") && specialization2.toLowerCase().equals("ml") || specialization2.toUpperCase().equals("ML"))
             {
-                System.out.println("YOUR SPEACILIZATION IS DF");
+                System.out.println("VALID");
             } else
-                System.out.println("YOUR SPEACILIZATION IS ML");
+                System.out.println("INVALID");
         }
 
         System.out.println("");
@@ -164,7 +164,7 @@ public class App {
         System.out.println("TVL MARITIME");
         System.out.print("Enter your SHS strand: ");
 
-        String strand = scan.next();
+        String strand = scan.next().toUpperCase();
 
         switch (strand) {
 
@@ -208,10 +208,11 @@ public class App {
         System.out.print("Enter your student email address: ");
         String studentEmailAddress = scan.next();
 
-        if (studentEmailAddress.contains("meneses")) {
-            System.out.println("VALID EMAIL");
-        } else
-            System.out.println("INVALID EMAIL");
+        if (studentEmailAddress.contains("meneses") && studentEmailAddress.contains("@student.national-u.edu.ph")) {
+            System.out.println("VALID");
+        } else {
+            System.out.println("INVALID");
+        }
 
         System.out.println("");
         // ==============================================================================
@@ -265,8 +266,7 @@ public class App {
         
         System.out.println("(" + tempk + ") thoudsand (" + tempFive + ") 500 hundred (" + tempTwoH + ") 200 hundred (" + tempOneH + ") 100 hundred (" + tempfifty + ") 50 pesos (" + temptwenty + ") 20 pesos");
         }
-
-        
+        System.out.println("");
         // Close scanner
         scan.close();
     }
