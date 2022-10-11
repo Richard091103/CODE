@@ -16,25 +16,31 @@ public class Exam {
         // 3. Print result of the method.
 
         // ==============================================================================
-        // 1. Create a method and think of a formula to get the last 6 digits of your
-        // student number. (10 pts)
-        System.out.println("1. Last six digits");
-        System.out.print("Enter your ten digit student number: ");
-        int studentNumber = scan.nextInt();
-
+        // 1. Create a method that will:
+        // print "POSITIVE" if the number is a positive number. 
+        // print "NEGATIVE" if the number is a negative number. 
+        // print "ZERO" if the number is ZERO. 
+        //(10 pts)
+        System.out.println("1. Positive, negative, zero");
+        System.out.print("Enter a number: ");
+        int number = scan.nextInt();
         // ==============================================================================
 
         // 2. Create a method that will:
-        // print "ODD" if the last two digits of your student number is an odd number
-        // print "EVEN" if the last two digits of your student number is an even number.
+        // print "PRIME" if the last digit of your student number is a prime number
+        // print "COMPOSITE" if the last digit of your student number is a composite
+        // number.
+        // print "NEITHER" if the last digit of your student number is neither a prime
+        // or a composite number.
         // (10 pts)
-        System.out.println("2. ODD or EVEN numbers");
-        System.out.print("Enter the last two digits of your student number: ");
-        int lastTwoDigits = scan.nextInt();
+
+        System.out.println("2. PRIME or COMPOSITE number");
+        System.out.print("Enter the last digit of your student number: ");
+        int lastDigit = scan.nextInt();
 
         // ==============================================================================
 
-        // 3. Create a method that will return the total character length of your
+        // 3. Create a method that will return the sum of the character length of your
         // firstname and your surname. (10 pts)
         System.out.println("3. Length of your fullname");
         System.out.print("Enter your firstname: ");
@@ -44,20 +50,22 @@ public class Exam {
 
         // ==============================================================================
 
-        // 4. Create a method to that will return true if your firstname in BOTH
-        // UPPERCASE and lowercase are EQUAL.
-        // Otherwise, return false.
-        System.out.println("4. Check your first name in LOWERCASE and UPPERCASE");
-        System.out.print("Enter your first name in lowercase: ");
-        String firstNameInLowerCase = scan.next();
-        System.out.print("Enter your first name in UPPERCASE: ");
-        String firstNameInUpperCase = scan.next();
+        // 4. Create a method that will take three whole numbers and print the largest number.
+   
+        System.out.println("4. Largest Number");
+        System.out.print("Enter first number: ");
+        int firstNumber = scan.nextInt();
+        System.out.print("Enter second number: ");
+        int secondNumber = scan.nextInt();
+        System.out.print("Enter third number: ");
+        int thirdNumber = scan.nextInt();
+
 
         // ==============================================================================
 
-        // 5. Create a method that will return true if your name starts with
-        // a vowel 'A','E','I','O','U'.
-        // Otherwise, return false.
+        // 5. Create a method that will print "VOWEL" if your name starts with
+        // a vowel and "CONSONANT" if your name starts with a consonant.
+        
         System.out.println("5. Vowel or Consonant");
         System.out.print("Enter the first character of your first name: ");
         char firstChar = scan.next().charAt(0);
@@ -73,7 +81,7 @@ public class Exam {
         // number. (10 pts)
         System.out.println("6. Student number validation");
         System.out.print("Enter your ten digit student number: ");
-        studentNumber = scan.nextInt();
+        int studentNumber = scan.nextInt();
 
         // ==============================================================================
 
@@ -136,9 +144,16 @@ public class Exam {
 
         // ==============================================================================
 
-        // 10. Create a condition to check if your student email address contains your
-        // surname. (10 pts)
+        // 10. Create a condition to check if your student email address contains the following pattern:
+        // - Your surname
+        // - The string "@student.national-u.edu.ph"
+        //(10 pts)
         System.out.println("10. Validate student email address ");
+        System.out.print("Enter your student email address: ");
+        String studentEmailAddress = scan.next();
+
+        // ==============================================================================
+        // Programming competition/Job interview level question (20 points)
 
         // 11. Think like an ATM.
 
@@ -162,6 +177,5 @@ public class Exam {
 
         // Close scanner
         scan.close();
-        
     }
- }
+}
